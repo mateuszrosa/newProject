@@ -1,3 +1,28 @@
 .first {
-  /*background-color: black;*/
+  clear: both;
+}
+.create {
+  width: 100px;
+  height: 25px;
+  border: 1px solid;
+  float: left;
+  text-align: center;
+}
+
+.preview {
+  width: 100px;
+  height: 25px;
+  border: 1px solid;
+  float: left;
+  margin-left: 25px;
+  text-align: center;
+}
+
+.export {
+  width: 100px;
+  height: 25px;
+  border: 1px solid;
+  float: left;
+  margin-left: 25px;
+  text-align: center;
 }
