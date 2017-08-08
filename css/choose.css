@@ -1,0 +1,32 @@
+.choose {
+  padding-left: 150px;
+}
+
+.create {
+  width: 100px;
+  height: 25px;
+  border: 1px solid;
+  float: left;
+  text-align: center;
+  padding-top: 5px;
+}
+
+.preview {
+  width: 100px;
+  height: 25px;
+  border: 1px solid;
+  float: left;
+  margin-left: 25px;
+  text-align: center;
+  padding-top: 5px;
+}
+
+.export {
+  width: 100px;
+  height: 25px;
+  border: 1px solid;
+  float: left;
+  margin-left: 25px;
+  text-align: center;
+  padding-top: 5px;
+}
