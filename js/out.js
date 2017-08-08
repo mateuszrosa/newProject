@@ -10261,7 +10261,7 @@ document.addEventListener('DOMContentLoaded', function () {
           ),
           _react2.default.createElement(
             'div',
-            { className: 'export' },
+            { className: 'export1' },
             'Export'
           )
         );

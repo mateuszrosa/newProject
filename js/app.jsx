@@ -8,7 +8,7 @@ class Choose extends React.Component {
     return <div className='choose'>
       <div className='create'>Create</div>
       <div className='preview'>Preview</div>
-      <div className='export'>Export</div>
+      <div className='export1'>Export</div>
     </div>
   }
 }
