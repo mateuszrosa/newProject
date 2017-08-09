@@ -4,3 +4,7 @@
   clear: both;
   display: none;
 }
+
+.color {
+  background-color: grey;
+}
