@@ -34,4 +34,12 @@ $('.addbtn').on('click', function() {
   $('.addbtn').after(newForm);
 })
 
+$('.first').on('click', '.delete', function() {
+  $(this).closest('.form').remove();
+})
+
+$('.first').on('click', '.addsubinput', function() {
+  console.log('click1');
+})
+
 })
