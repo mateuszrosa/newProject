@@ -10237,10 +10237,21 @@ document.addEventListener('DOMContentLoaded', function () {
   var Choose = function (_React$Component) {
     _inherits(Choose, _React$Component);
 
-    function Choose() {
+    function Choose(props) {
       _classCallCheck(this, Choose);
 
-      return _possibleConstructorReturn(this, (Choose.__proto__ || Object.getPrototypeOf(Choose)).apply(this, arguments));
+      var _this = _possibleConstructorReturn(this, (Choose.__proto__ || Object.getPrototypeOf(Choose)).call(this, props));
+
+      _this.handleChangeColor = function () {
+        _this.setState({
+          createColor: 'grey'
+        });
+      };
+
+      _this.state = {
+        createColor: ' '
+      };
+      return _this;
     }
 
     _createClass(Choose, [{
@@ -10256,7 +10267,10 @@ document.addEventListener('DOMContentLoaded', function () {
           ),
           _react2.default.createElement(
             'div',
-            { className: 'create' },
+            { className: 'create',
+              onClick: this.handleChangeColor,
+              style: { backgroundColor: this.state.createColor }
+            },
             'Create'
           ),
           _react2.default.createElement(
@@ -10286,6 +10300,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     _createClass(Form, [{
+      key: 'handleClick',
+      value: function handleClick() {
+        console.log('clicked');
+      }
+    }, {
       key: 'render',
       value: function render() {
         return _react2.default.createElement(
@@ -10293,8 +10312,9 @@ document.addEventListener('DOMContentLoaded', function () {
           { className: 'first' },
           _react2.default.createElement(
             'div',
-            { className: 'addbtn' },
-            '        Add Input'
+            { className: 'addbtn',
+              onClick: this.handleClick },
+            'Add Input'
           )
         );
       }

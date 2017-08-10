@@ -4,10 +4,24 @@ import ReactDOM from 'react-dom';
 document.addEventListener('DOMContentLoaded', function() {
 
 class Choose extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      createColor: ' ',
+    }
+  }
+  handleChangeColor = () => {
+    this.setState({
+      createColor: 'grey',
+    })
+  }
   render() {
     return <div className='choose'>
       <h1>Form builder</h1>
-      <div className='create'>Create</div>
+      <div className='create'
+        onClick={this.handleChangeColor}
+        style={{backgroundColor: this.state.createColor}}
+        >Create</div>
       <div className='preview'>Preview</div>
       <div className='export1'>Export</div>
     </div>
@@ -15,9 +29,14 @@ class Choose extends React.Component {
 }
 
 class Form extends React.Component {
+  handleClick() {
+    console.log('clicked');
+  }
   render() {
     return <div className='first'>
-      <div className='addbtn'>        Add Input
+      <div className='addbtn'
+        onClick={this.handleClick}>
+        Add Input
       </div>
     </div>
   }
