@@ -10250,6 +10250,11 @@ document.addEventListener('DOMContentLoaded', function () {
           'div',
           { className: 'choose' },
           _react2.default.createElement(
+            'h1',
+            null,
+            'Form builder'
+          ),
+          _react2.default.createElement(
             'div',
             { className: 'create' },
             'Create'
@@ -10287,37 +10292,9 @@ document.addEventListener('DOMContentLoaded', function () {
           'div',
           { className: 'first' },
           _react2.default.createElement(
-            'form',
-            null,
-            _react2.default.createElement(
-              'h1',
-              null,
-              'Podaj imi\u0119:'
-            ),
-            _react2.default.createElement(
-              'select',
-              null,
-              _react2.default.createElement(
-                'option',
-                { value: 'volvo' },
-                'Volvo'
-              ),
-              _react2.default.createElement(
-                'option',
-                { value: 'saab' },
-                'Saab'
-              ),
-              _react2.default.createElement(
-                'option',
-                { value: 'mercedes' },
-                'Mercedes'
-              ),
-              _react2.default.createElement(
-                'option',
-                { value: 'audi' },
-                'Audi'
-              )
-            )
+            'div',
+            { className: 'addbtn' },
+            '        Add Input'
           )
         );
       }
@@ -10342,6 +10319,7 @@ document.addEventListener('DOMContentLoaded', function () {
           'div',
           null,
           _react2.default.createElement(Choose, null),
+          '// ',
           _react2.default.createElement(Form, null)
         );
       }

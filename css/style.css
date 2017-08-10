@@ -8,3 +8,21 @@
 .color {
   background-color: grey;
 }
+
+.addbtn {
+  width: 150px;
+  height: 25px;
+  border: 1px solid black;
+  margin-left: 20px;
+  margin-top: 100px;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 800;
+}
+
+.form {
+  border: 1px solid black;
+  width: 500px;
+  height: 200px;
+  margin-left:350px;
+}

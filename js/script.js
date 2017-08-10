@@ -9,4 +9,19 @@ $('.create').on('click', function() {
     }
 })
 
+$('.preview').on('click', function() {
+  $(this).toggleClass('color');
+})
+
+$('.export1').on('click', function() {
+  $(this).toggleClass('color');
+})
+
+let newForm = $(`<form><input/></form>`);
+
+$('.addbtn').on('click', function() {
+  let newForm = $(`<input/>`);
+  $('.first').prepend(newForm);
+})
+
 })
