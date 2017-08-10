@@ -18,7 +18,19 @@ $('.export1').on('click', function() {
 })
 
 $('.addbtn').on('click', function() {
-  let newForm = $(`<input class='form'/>`);
+  let newForm = $(`
+    <div class='form'>
+      <label>Question</label>
+      <input class='input'/>
+      <label>Type</label>
+      <select>
+        <option selected disabled>Yes/No</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+      <div class='addsubinput'>Add Sub-Input</div>
+      <div class='delete'>Delete</div>
+    </div>`);
   $('.addbtn').after(newForm);
 })
 

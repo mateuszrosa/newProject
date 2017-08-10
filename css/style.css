@@ -27,3 +27,54 @@
   height: 200px;
   margin-left:350px;
 }
+
+label {
+  margin-left: 20px;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.input {
+  width: 350px;
+  height: 20px;
+  font-size: 20px;
+  margin-top: 25px;
+  margin-left: 20px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border: 1px solid black;
+}
+
+select {
+  width: 352px;
+  margin-top: 15px;
+  margin-left: 55px;
+  font-size: 20px;
+}
+
+.addsubinput {
+  width: 150px;
+  height: 30px;
+  border: 1px solid black;
+  margin-top: 15px;
+  margin-left: 120px;
+  float: left;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 800;
+  padding-top: 5px;
+}
+
+.delete {
+  width: 150px;
+  height: 30px;
+  border: 1px solid black;
+  margin-top: 15px;
+  margin-left: 15px;
+  float: left;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 800;
+  padding-top: 5px;
+}
