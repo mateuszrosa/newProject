@@ -10319,7 +10319,6 @@ document.addEventListener('DOMContentLoaded', function () {
           'div',
           null,
           _react2.default.createElement(Choose, null),
-          '// ',
           _react2.default.createElement(Form, null)
         );
       }

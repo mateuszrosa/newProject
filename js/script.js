@@ -17,11 +17,9 @@ $('.export1').on('click', function() {
   $(this).toggleClass('color');
 })
 
-let newForm = $(`<form><input/></form>`);
-
 $('.addbtn').on('click', function() {
-  let newForm = $(`<input/>`);
-  $('.first').prepend(newForm);
+  let newForm = $(`<input class='form'/>`);
+  $('.addbtn').after(newForm);
 })
 
 })
