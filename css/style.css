@@ -26,14 +26,16 @@
   width: 500px;
   height: 200px;
   margin-left:350px;
+  position: relative;
 }
 
 .form1 {
-  margin-top: 50px;
+  margin-top: 170px;
   border: 1px solid black;
   width: 500px;
   height: 200px;
   margin-left:380px;
+  position: relative;
 }
 
 label {
@@ -78,11 +80,26 @@ select {
   width: 150px;
   height: 30px;
   border: 1px solid black;
-  margin-top: 15px;
-  margin-left: 15px;
   float: left;
   text-align: center;
   font-size: 20px;
   font-weight: 800;
   padding-top: 5px;
+  position: absolute;
+  top: 105px;
+  right: 55px;
+}
+
+.delete1 {
+  width: 150px;
+  height: 30px;
+  border: 1px solid black;
+  float: left;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 800;
+  padding-top: 5px;
+  position: absolute;
+  top: 105px;
+  right: 55px;
 }

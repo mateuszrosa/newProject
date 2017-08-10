@@ -50,9 +50,9 @@ $('.first').on('click', '.addsubinput', function() {
         <option value="no">No</option>
       </select>
       <div class='addsubinput'>Add Sub-Input</div>
-      <div class='delete'>Delete</div>
+      <div class='delete1'>Delete</div>
     </div>`);
-  $('.form').after(newForm1);
+  $(this).after(newForm1);
 })
 
 })
