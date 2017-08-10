@@ -39,7 +39,20 @@ $('.first').on('click', '.delete', function() {
 })
 
 $('.first').on('click', '.addsubinput', function() {
-  console.log('click1');
+  let newForm1 = $(`
+    <div class='form form1'>
+      <label>Question</label>
+      <input class='input'/>
+      <label>Type</label>
+      <select>
+        <option selected disabled>Yes/No</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+      <div class='addsubinput'>Add Sub-Input</div>
+      <div class='delete'>Delete</div>
+    </div>`);
+  $('.form').after(newForm1);
 })
 
 })

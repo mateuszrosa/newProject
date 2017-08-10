@@ -28,6 +28,14 @@
   margin-left:350px;
 }
 
+.form1 {
+  margin-top: 50px;
+  border: 1px solid black;
+  width: 500px;
+  height: 200px;
+  margin-left:380px;
+}
+
 label {
   margin-left: 20px;
   font-size: 20px;
