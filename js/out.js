@@ -10254,8 +10254,34 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       };
 
+      _this.handleChangeColor1 = function () {
+        if (_this.state.createColor1 === 'grey') {
+          _this.setState({
+            createColor1: 'white'
+          });
+        } else {
+          _this.setState({
+            createColor1: 'grey'
+          });
+        }
+      };
+
+      _this.handleChangeColor2 = function () {
+        if (_this.state.createColor2 === 'grey') {
+          _this.setState({
+            createColor2: 'white'
+          });
+        } else {
+          _this.setState({
+            createColor2: 'grey'
+          });
+        }
+      };
+
       _this.state = {
-        createColor: ''
+        createColor: '',
+        createColor1: '',
+        createColor2: ''
       };
       return _this;
     }
@@ -10281,12 +10307,16 @@ document.addEventListener('DOMContentLoaded', function () {
           ),
           _react2.default.createElement(
             'div',
-            { className: 'preview' },
+            { className: 'preview',
+              onClick: this.handleChangeColor1,
+              style: { backgroundColor: this.state.createColor1 } },
             'Preview'
           ),
           _react2.default.createElement(
             'div',
-            { className: 'export1' },
+            { className: 'export1',
+              onClick: this.handleChangeColor2,
+              style: { backgroundColor: this.state.createColor2 } },
             'Export'
           )
         );
