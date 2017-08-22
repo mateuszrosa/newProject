@@ -10243,13 +10243,19 @@ document.addEventListener('DOMContentLoaded', function () {
       var _this = _possibleConstructorReturn(this, (Choose.__proto__ || Object.getPrototypeOf(Choose)).call(this, props));
 
       _this.handleChangeColor = function () {
-        _this.setState({
-          createColor: 'grey'
-        });
+        if (_this.state.createColor === 'grey') {
+          _this.setState({
+            createColor: 'white'
+          });
+        } else {
+          _this.setState({
+            createColor: 'grey'
+          });
+        }
       };
 
       _this.state = {
-        createColor: ' '
+        createColor: ''
       };
       return _this;
     }

@@ -7,13 +7,19 @@ class Choose extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      createColor: ' ',
+      createColor: '',
     }
   }
   handleChangeColor = () => {
-    this.setState({
-      createColor: 'grey',
-    })
+    if(this.state.createColor === 'grey') {
+      this.setState({
+        createColor: 'white',
+      })
+    } else {
+      this.setState({
+        createColor: 'grey',
+      })
+    }
   }
   render() {
     return <div className='choose'>
