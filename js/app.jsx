@@ -10,9 +10,21 @@ class Choose extends React.Component {
       createColor: '',
       createColor1: '',
       createColor2: '',
+      showButton: 'none',
     }
   }
+
   handleChangeColor = () => {
+    if(this.state.showButton === 'block') {
+      this.setState({
+        showButton: 'none',
+      })
+    } else {
+      this.setState({
+        showButton: 'block',
+      })
+    }
+
     if(this.state.createColor === 'grey') {
       this.setState({
         createColor: 'white',
@@ -47,43 +59,40 @@ class Choose extends React.Component {
       })
     }
   }
-  render() {
-    return <div className='choose'>
-      <h1>Form builder</h1>
-      <div className='create'
-        onClick={this.handleChangeColor}
-        style={{backgroundColor: this.state.createColor}}
-        >Create</div>
-      <div className='preview'
-        onClick={this.handleChangeColor1}
-        style={{backgroundColor: this.state.createColor1}}>Preview</div>
-      <div className='export1'
-        onClick={this.handleChangeColor2}
-        style={{backgroundColor: this.state.createColor2}}>Export</div>
-    </div>
-  }
-}
 
-class Form extends React.Component {
-  handleClick() {
-    console.log('clicked');
+  handleClick = () => {
+    console.log('click');
   }
+
   render() {
-    return <div className='first'>
-      <div className='addbtn'
-        onClick={this.handleClick}>
-        Add Input
+    return <div>
+      <div className='choose'>
+        <h1>Form builder</h1>
+        <div className='create'
+          onClick={this.handleChangeColor}
+          style={{backgroundColor: this.state.createColor}}
+          >Create</div>
+        <div className='preview'
+          onClick={this.handleChangeColor1}
+          style={{backgroundColor: this.state.createColor1}}>Preview</div>
+        <div className='export1'
+          onClick={this.handleChangeColor2}
+          style={{backgroundColor: this.state.createColor2}}>Export</div>
+      </div>
+      <div className='first'>
+        <div className='addbtn'
+          style={{display: this.state.showButton}}>
+          Add Input
+        </div>
       </div>
     </div>
   }
 }
 
+
 class App extends React.Component {
   render() {
-    return <div>
-      <Choose />
-      <Form />
-    </div>
+    return <Choose />
   }
 }
 

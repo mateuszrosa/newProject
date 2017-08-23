@@ -10243,6 +10243,16 @@ document.addEventListener('DOMContentLoaded', function () {
       var _this = _possibleConstructorReturn(this, (Choose.__proto__ || Object.getPrototypeOf(Choose)).call(this, props));
 
       _this.handleChangeColor = function () {
+        if (_this.state.showButton === 'block') {
+          _this.setState({
+            showButton: 'none'
+          });
+        } else {
+          _this.setState({
+            showButton: 'block'
+          });
+        }
+
         if (_this.state.createColor === 'grey') {
           _this.setState({
             createColor: 'white'
@@ -10278,10 +10288,15 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       };
 
+      _this.handleClick = function () {
+        console.log('click');
+      };
+
       _this.state = {
         createColor: '',
         createColor1: '',
-        createColor2: ''
+        createColor2: '',
+        showButton: 'none'
       };
       return _this;
     }
@@ -10291,33 +10306,47 @@ document.addEventListener('DOMContentLoaded', function () {
       value: function render() {
         return _react2.default.createElement(
           'div',
-          { className: 'choose' },
+          null,
           _react2.default.createElement(
-            'h1',
-            null,
-            'Form builder'
+            'div',
+            { className: 'choose' },
+            _react2.default.createElement(
+              'h1',
+              null,
+              'Form builder'
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'create',
+                onClick: this.handleChangeColor,
+                style: { backgroundColor: this.state.createColor }
+              },
+              'Create'
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'preview',
+                onClick: this.handleChangeColor1,
+                style: { backgroundColor: this.state.createColor1 } },
+              'Preview'
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'export1',
+                onClick: this.handleChangeColor2,
+                style: { backgroundColor: this.state.createColor2 } },
+              'Export'
+            )
           ),
           _react2.default.createElement(
             'div',
-            { className: 'create',
-              onClick: this.handleChangeColor,
-              style: { backgroundColor: this.state.createColor }
-            },
-            'Create'
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'preview',
-              onClick: this.handleChangeColor1,
-              style: { backgroundColor: this.state.createColor1 } },
-            'Preview'
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'export1',
-              onClick: this.handleChangeColor2,
-              style: { backgroundColor: this.state.createColor2 } },
-            'Export'
+            { className: 'first' },
+            _react2.default.createElement(
+              'div',
+              { className: 'addbtn',
+                style: { display: this.state.showButton } },
+              'Add Input'
+            )
           )
         );
       }
@@ -10326,41 +10355,8 @@ document.addEventListener('DOMContentLoaded', function () {
     return Choose;
   }(_react2.default.Component);
 
-  var Form = function (_React$Component2) {
-    _inherits(Form, _React$Component2);
-
-    function Form() {
-      _classCallCheck(this, Form);
-
-      return _possibleConstructorReturn(this, (Form.__proto__ || Object.getPrototypeOf(Form)).apply(this, arguments));
-    }
-
-    _createClass(Form, [{
-      key: 'handleClick',
-      value: function handleClick() {
-        console.log('clicked');
-      }
-    }, {
-      key: 'render',
-      value: function render() {
-        return _react2.default.createElement(
-          'div',
-          { className: 'first' },
-          _react2.default.createElement(
-            'div',
-            { className: 'addbtn',
-              onClick: this.handleClick },
-            'Add Input'
-          )
-        );
-      }
-    }]);
-
-    return Form;
-  }(_react2.default.Component);
-
-  var App = function (_React$Component3) {
-    _inherits(App, _React$Component3);
+  var App = function (_React$Component2) {
+    _inherits(App, _React$Component2);
 
     function App() {
       _classCallCheck(this, App);
@@ -10371,12 +10367,7 @@ document.addEventListener('DOMContentLoaded', function () {
     _createClass(App, [{
       key: 'render',
       value: function render() {
-        return _react2.default.createElement(
-          'div',
-          null,
-          _react2.default.createElement(Choose, null),
-          _react2.default.createElement(Form, null)
-        );
+        return _react2.default.createElement(Choose, null);
       }
     }]);
 
